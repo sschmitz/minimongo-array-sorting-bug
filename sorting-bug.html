@@ -1,0 +1,23 @@
+<head>
+  <title>sorting-bug</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <h1>Descending order</h1>
+  <ul>
+    {{#each desc}}
+      <li>{{text}} ({{sortField}})</li>
+    {{/each}}
+  </ul>
+
+  <h1>Ascending order (doesn't work)</h1>
+  <ul>
+    {{#each asc}}
+      <li>{{text}} ({{sortField}})</li>
+    {{/each}}
+  </ul>
+</template>
